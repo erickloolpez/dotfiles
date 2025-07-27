@@ -52,12 +52,12 @@ return {
       suggestion = {
         auto_trigger = true,
         keymap = {
-          accept = "<C-l>",
-          accept_word = "<M-l>",
-          accept_line = "<M-S-l>",
-          next = "<M-]>",
-          prev = "<M-[>",
-          dismiss = "<C-]>",
+          accept = "<Tab>",        -- Cambio: más común y sin conflicto
+          accept_word = "<C-Right>", -- Cambio: más intuitivo
+          accept_line = "<C-S-Right>", -- Cambio: similar al anterior
+          next = "<C-n>",
+          prev = "<C-p>",
+          dismiss = "<C-]>",      -- Sin cambio
         },
       },
       filetypes = {
