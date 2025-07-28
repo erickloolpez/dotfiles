@@ -25,6 +25,17 @@ set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
 
+function ide
+    # Primero verifica si tmux está corriendo
+    if not tmux list-sessions >/dev/null 2>&1
+        echo "Iniciando nueva sesión de tmux..."
+        tmux new-session -d
+    end
+
+    # Ejecuta el script de configuración
+    ~/.config/scripts/ide # Cambia esta ruta si moviste el archivo
+end
+
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
 
