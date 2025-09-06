@@ -1,0 +1,62 @@
+# --- Navegación entre ventanas ---
+# Navegar entre ventanas
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+alt - c : yabai -m window --focus north
+alt - t : yabai -m window --focus south
+
+# Cambiar entre monitores
+alt - left : yabai -m display --focus west
+alt - right : yabai -m display --focus east
+
+# --- Controles de ventana ---
+# Pantalla completa
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+# Ventana flotante
+alt - w : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# Balancear ventanas
+alt - e : yabai -m space --balance
+
+# Rotar layout
+alt - r : yabai -m space --rotate 270
+
+# --- Mover ventanas ---
+# Intercambiar ventanas con Alt + Shift
+alt + shift - h : yabai -m window --swap west
+alt + shift - l : yabai -m window --swap east
+alt + shift - c : yabai -m window --swap north
+alt + shift - t : yabai -m window --swap south
+
+# --- Espacios de trabajo ---
+# Ir a espacio específico (Alt + número)
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
+alt - 4 : yabai -m space --focus 4
+alt - 5 : yabai -m space --focus 5
+alt - 6 : yabai -m space --focus 6
+
+# Mover ventana a espacio específico (Alt + Shift + número)
+alt + shift - 1 : yabai -m window --space 1; yabai -m space --focus 1
+alt + shift - 2 : yabai -m window --space 2; yabai -m space --focus 2
+alt + shift - 3 : yabai -m window --space 3; yabai -m space --focus 3
+alt + shift - 4 : yabai -m window --space 4; yabai -m space --focus 4
+alt + shift - 5 : yabai -m window --space 5; yabai -m space --focus 5
+alt + shift - 6 : yabai -m window --space 6; yabai -m space --focus 6
+
+# Navegar al espacio anterior/siguiente
+alt - left : yabai -m space --focus prev
+alt - right : yabai -m space --focus next
+
+# Mover ventana al espacio anterior/siguiente
+alt + shift - left : yabai -m window --space prev; yabai -m space --focus prev
+alt + shift - right : yabai -m window --space next; yabai -m space --focus next
+
+# --- Control de yabai ---
+# Reiniciar yabai
+alt + shift - r : yabai --restart-service
+
+# Parar yabai
+alt + shift - q : yabai --stop-service
